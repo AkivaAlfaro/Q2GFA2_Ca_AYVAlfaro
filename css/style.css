@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+body{
+    background-image: url(../images/stars.avif);
+    display: inline-block;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    background-size: auto;
+}
+.heavenbodies{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    position: relative;
+}
+#galaxy{
+    background-image: url(../images/galaxy.gif);
+    width: 25vw;
+    height: 20vw;
+    animation:galaxymotion 15s ease-in-out infinite;
+    z-index: 98;
+}
+#blackhole{
+    background-image: url(../images/blackhole.gif);
+    width: 30vw;
+    height: 25vw;
+    animation:blackholemotion 20s linear infinite;
+    z-index: 98;
+}
+#star{
+    background-image: url(../images/pinkstar.gif);
+    width: 15vw;
+    height: 15vw;
+    animation:starmotion 18s linear infinite;
+    z-index: 95;
+}
+#terran{
+    background-image: url(../images/terranwet.gif);
+    width: 20vw;
+    height:15vw;
+    animation:terranmotion 15s ease-in-out infinite;
+    z-index: 96;
+}
+@keyframes galaxymotion{
+    0% {transform: translate(10vw, -20vw) rotate(90deg) skew(180deg, 270deg); opacity: 1;}
+    100% {transform: translate(45vw, 40vw) rotate(270deg) skew(90deg, 180deg); opacity: 0;}
+}
+@keyframes blackholemotion{
+    0% {transform: translate(-10vw, -100vw);}
+    100% {transform: translate(75vw, 50vw);}
+}
+@keyframes starmotion{
+    0% {transform: translate(-1000px, -10px);}
+    100% {transform: translate(1000px, -10px);}
+}
+@keyframes terranmotion{
+    0% {transform: translate(-1600px, -500px) scale(1);}
+    100% {transform: translate(100px, 1000px) scale(.5);}
+}
